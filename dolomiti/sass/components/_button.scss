@@ -1,0 +1,33 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+
+    /* DEFAULT is treated as text */
+    /* inline-block makes it a block element  */
+
+    border-radius: 10rem;
+
+    /* Transition all has to be here in initial state */
+    transition: all 0.2s;
+    position: relative;
+
+    color: white;
+
+    //change for the <button> element
+    border: none;
+    cursor: pointer;
+  }
+
+  &--white {
+    background: white;
+    color: darkgray;
+
+    &::after {
+      background-color: white;
+    }
+  }
+}

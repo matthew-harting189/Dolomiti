@@ -1,0 +1,122 @@
+.navigation {
+  position: relative;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
+  &__nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  &__checkbox {
+    display: none;
+  }
+
+  &-container {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    left: 3.1rem;
+  }
+
+  &__list {
+    list-style: none;
+    margin-left: 0.5rem;
+    display: flex;
+  }
+
+  &__item {
+    padding: 2rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      font-size: 1.5rem;
+      color: black;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: $default-font;
+      font-weight: $default-nav-font-weight;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 0%;
+      border-bottom: 0.5rem solid black;
+      transition: 0.5s;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+.column-span {
+  color: white;
+}
+
+.drop-menu {
+  position: absolute;
+  display: flex;
+  top: 100%;
+  left: 0;
+  width: 100vw;
+  height: 100vw;
+  padding: 6rem 8vw;
+  min-height: 40rem;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #000;
+  list-style: none;
+
+  &__product-link {
+    &:link,
+    &:visited {
+      color: white;
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-family: $default-font;
+      color: white;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 0%;
+      border-bottom: 0.25rem solid white;
+      transition: 0.5s;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  &__sub {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    font-family: $default-font;
+    color: white;
+
+    &--womens {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.65rem;
+      margin: 0.5rem;
+      color: white;
+      letter-spacing: 0.1rem;
+    }
+
+    &--mens {
+      color: blue;
+    }
+  }
+}
